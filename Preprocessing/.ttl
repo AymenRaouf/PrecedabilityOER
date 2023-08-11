@@ -1,0 +1,663 @@
+@prefix : <http://example.org/> .
+@prefix dbpt: <https://dbpedia.org/ontology/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://univ-nantes.fr/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wiki: <http://en.wikipedia.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Chapter dct:subject wiki:1750%e2%80%931775_in_Western_fashion,
+        wiki:1980%e2%80%9381_Idaho_Vandals_men%27s_basketball_team,
+        wiki:2009_timeline_of_the_Somali_Civil_War,
+        wiki:Academic_discipline,
+        wiki:Afterwards_\(play\),
+        wiki:American_Revolutionary_War,
+        wiki:And_I,
+        wiki:Anticipation_\(artificial_intelligence\),
+        wiki:Anyway_\(Martina_McBride_song\),
+        wiki:Ask_price,
+        wiki:Attention,
+        wiki:Attention_span,
+        wiki:Auscultation,
+        wiki:Backmasking,
+        wiki:Backward_compatibility,
+        wiki:Beauty,
+        wiki:Boarding_school,
+        wiki:Budha,
+        wiki:Buttocks,
+        wiki:Canning,
+        wiki:Celebrity,
+        wiki:Channel_5_\(British_TV_channel\),
+        wiki:Citizenship,
+        <http://en.wikipedia.org/wiki/Concord,_Massachusetts>,
+        wiki:Conservatism_in_the_United_States,
+        wiki:Deer,
+        wiki:Defensive_wall,
+        wiki:Document,
+        wiki:Driving,
+        wiki:Dry_stone,
+        wiki:Earth,
+        wiki:Education,
+        wiki:Elizabeth_II,
+        wiki:Eminent_domain,
+        wiki:Equation,
+        wiki:Essentialism,
+        wiki:Excerpt,
+        wiki:Excuse,
+        wiki:Existence,
+        wiki:Existentialism,
+        wiki:Experience,
+        wiki:Field_trip,
+        wiki:Folklore,
+        wiki:Free_will,
+        wiki:Fun_\(band\),
+        wiki:Further_education,
+        wiki:Glossary_of_ballet,
+        wiki:Glossary_of_professional_wrestling_terms,
+        wiki:Going-to_future,
+        wiki:Going_\(horse_racing\),
+        wiki:Grader,
+        wiki:Grand_jury,
+        wiki:Guide,
+        wiki:Has_\(region\),
+        wiki:Hearing_loss,
+        wiki:Highway,
+        wiki:Hiking,
+        wiki:Historic_preservation,
+        wiki:History,
+        wiki:History_of_the_United_States,
+        wiki:Hope,
+        wiki:Hour,
+        wiki:Implicit_memory,
+        wiki:Important_Bird_Area,
+        wiki:Index_term,
+        wiki:Infrared,
+        wiki:Interrogative_word,
+        wiki:Intimate_relationship,
+        wiki:Invasion_of_Poland,
+        wiki:Inventive_step_and_non-obviousness,
+        wiki:Kom%c3%a1rom_County,
+        wiki:Last_words,
+        wiki:Lawyer,
+        wiki:Leaf,
+        wiki:Life,
+        wiki:Life_\(magazine\),
+        wiki:List_of_TCP_and_UDP_port_numbers,
+        wiki:List_of_U%2eS%2e_states_by_date_of_admission_to_the_Union,
+        wiki:List_of_association_football_rivalries,
+        wiki:Logical_conjunction,
+        wiki:Looking_\(TV_series\),
+        wiki:Lost_film,
+        <http://en.wikipedia.org/wiki/Mary,_mother_of_Jesus>,
+        wiki:Massachusetts,
+        wiki:Me_\(mythology\),
+        wiki:Meadow,
+        wiki:Mean,
+        wiki:Minutemen,
+        wiki:Minutemen_\(band\),
+        wiki:Mother,
+        wiki:Multiverse,
+        wiki:Navigation,
+        wiki:Now_\(newspaper\),
+        wiki:Object_\(philosophy\),
+        wiki:Old_World,
+        wiki:One_Day_International,
+        wiki:Orthopedic_surgery,
+        wiki:Ownership,
+        wiki:Parity_\(mathematics\),
+        wiki:Peace,
+        wiki:Physics_beyond_the_Standard_Model,
+        wiki:Present,
+        wiki:Public_speaking,
+        wiki:Question,
+        wiki:Quickening,
+        wiki:Race_and_ethnicity_in_the_United_States_census,
+        wiki:Rock_\(geology\),
+        wiki:Royal_we,
+        wiki:Running_back,
+        wiki:September_11_attacks,
+        wiki:Sexual_dimorphism,
+        wiki:She_\(pronoun\),
+        wiki:Singular_they,
+        wiki:So_\(dairy_product\),
+        wiki:Social_class,
+        wiki:Sort_\(typesetting\),
+        wiki:Speech,
+        wiki:Spinning_\(textiles\),
+        wiki:Startup_company,
+        wiki:Take,
+        wiki:Talk_radio,
+        wiki:Tangent,
+        wiki:Thought,
+        wiki:Time,
+        wiki:Torque,
+        wiki:Tour_guide,
+        wiki:Tourism,
+        wiki:Traffic_stop,
+        wiki:Trial,
+        wiki:Truth,
+        wiki:Understanding,
+        wiki:United_States,
+        wiki:University,
+        wiki:Unix-like,
+        wiki:Want,
+        wiki:Weaving,
+        wiki:Week,
+        wiki:What,
+        wiki:Whatever_\(slang\),
+        wiki:World_Trade_Center_site,
+        wiki:Year .
+
+wiki:1750%e2%80%931775_in_Western_fashion dct:title "1750–1775 in Western fashion" ;
+    ns1:pageRank 1.483409e-04 .
+
+wiki:1980%e2%80%9381_Idaho_Vandals_men%27s_basketball_team dct:title "1980–81 Idaho Vandals men's basketball team" ;
+    ns1:pageRank 1.631465e-04 .
+
+wiki:2009_timeline_of_the_Somali_Civil_War dct:title "2009 timeline of the Somali Civil War" ;
+    ns1:pageRank 2.061546e-05 .
+
+wiki:Academic_discipline dct:title "Academic discipline" ;
+    ns1:pageRank 2.507093e-03 .
+
+wiki:Afterwards_\(play\) dct:title "Afterwards (play)" ;
+    ns1:pageRank 2.49842e-04 .
+
+wiki:American_Revolutionary_War dct:title "American Revolutionary War" ;
+    rdfs:subClassOf dbpt:Event,
+        dbpt:MilitaryConflict ;
+    ns1:pageRank 7.275973e-03 .
+
+wiki:And_I dct:title "And I" ;
+    rdfs:subClassOf dbpt:MusicalWork,
+        dbpt:Single,
+        dbpt:Work ;
+    ns1:pageRank 4.870336e-05 .
+
+wiki:Anticipation_\(artificial_intelligence\) dct:title "Anticipation (artificial intelligence)" ;
+    ns1:pageRank 1.160464e-04 .
+
+wiki:Anyway_\(Martina_McBride_song\) dct:title "Anyway (Martina McBride song)" ;
+    rdfs:subClassOf dbpt:MusicalWork,
+        dbpt:Single,
+        dbpt:Work ;
+    ns1:pageRank 5.962303e-04 .
+
+wiki:Ask_price dct:title "Ask price" ;
+    ns1:pageRank 2.532471e-04 .
+
+wiki:Attention dct:title "Attention" ;
+    ns1:pageRank 1.87732e-03 .
+
+wiki:Attention_span dct:title "Attention span" ;
+    ns1:pageRank 3.686961e-03 .
+
+wiki:Auscultation dct:title "Auscultation" ;
+    ns1:pageRank 6.790579e-04 .
+
+wiki:Backmasking dct:title "Backmasking" ;
+    ns1:pageRank 5.399648e-04 .
+
+wiki:Backward_compatibility dct:title "Backward compatibility" ;
+    ns1:pageRank 7.867097e-04 .
+
+wiki:Beauty dct:title "Beauty" ;
+    ns1:pageRank 2.030976e-03 .
+
+wiki:Boarding_school dct:title "Boarding school" ;
+    ns1:pageRank 2.290465e-03 .
+
+wiki:Budha dct:title "Budha" ;
+    ns1:pageRank 3.44002e-04 .
+
+wiki:Buttocks dct:title "Buttocks" ;
+    rdfs:subClassOf dbpt:AnatomicalStructure ;
+    ns1:pageRank 1.778966e-03 .
+
+wiki:Canning dct:title "Canning" ;
+    ns1:pageRank 1.506512e-03 .
+
+wiki:Celebrity dct:title "Celebrity" ;
+    ns1:pageRank 2.235162e-03 .
+
+wiki:Channel_5_\(British_TV_channel\) dct:title "Channel 5 (British TV channel)" ;
+    ns1:pageRank 1.019809e-03 .
+
+wiki:Citizenship dct:title "Citizenship" ;
+    ns1:pageRank 5.438973e-03 .
+
+<http://en.wikipedia.org/wiki/Concord,_Massachusetts> dct:title "Concord, Massachusetts" ;
+    rdfs:subClassOf dbpt:AdministrativeRegion,
+        dbpt:City,
+        dbpt:Place,
+        dbpt:PopulatedPlace,
+        dbpt:Region,
+        dbpt:Settlement,
+        dbpt:Town ;
+    ns1:pageRank 1.890348e-02 .
+
+wiki:Conservatism_in_the_United_States dct:title "Conservatism in the United States" ;
+    ns1:pageRank 3.237101e-03 .
+
+wiki:Deer dct:title "Deer" ;
+    rdfs:subClassOf dbpt:Animal,
+        dbpt:Eukaryote,
+        dbpt:Mammal,
+        dbpt:Species ;
+    ns1:pageRank 2.370799e-03 .
+
+wiki:Defensive_wall dct:title "Defensive wall" ;
+    ns1:pageRank 1.622825e-03 .
+
+wiki:Document dct:title "Document" ;
+    ns1:pageRank 1.707997e-03 .
+
+wiki:Driving dct:title "Driving" ;
+    ns1:pageRank 1.322382e-03 .
+
+wiki:Dry_stone dct:title "Dry stone" ;
+    ns1:pageRank 1.154801e-03 .
+
+wiki:Earth dct:title "Earth" ;
+    rdfs:subClassOf dbpt:CelestialBody,
+        dbpt:Planet ;
+    ns1:pageRank 2.697942e-03 .
+
+wiki:Education dct:title "Education" ;
+    ns1:pageRank 3.528608e-03 .
+
+wiki:Elizabeth_II dct:title "Elizabeth II" ;
+    rdfs:subClassOf dbpt:Agent,
+        dbpt:BritishRoyalty,
+        dbpt:Noble,
+        dbpt:OfficeHolder,
+        dbpt:Person,
+        dbpt:Royalty ;
+    ns1:pageRank 2.58451e-03 .
+
+wiki:Eminent_domain dct:title "Eminent domain" ;
+    ns1:pageRank 2.363091e-03 .
+
+wiki:Equation dct:title "Equation" ;
+    ns1:pageRank 1.380596e-03 .
+
+wiki:Essentialism dct:title "Essentialism" ;
+    ns1:pageRank 1.754924e-03 .
+
+wiki:Excerpt dct:title "Excerpt" ;
+    ns1:pageRank 1.613462e-04 .
+
+wiki:Excuse dct:title "Excuse" ;
+    ns1:pageRank 7.520142e-04 .
+
+wiki:Existence dct:title "Existence" ;
+    ns1:pageRank 1.660054e-03 .
+
+wiki:Existentialism dct:title "Existentialism" ;
+    ns1:pageRank 2.380405e-03 .
+
+wiki:Experience dct:title "Experience" ;
+    ns1:pageRank 2.051545e-03 .
+
+wiki:Field_trip dct:title "Field trip" ;
+    ns1:pageRank 1.935251e-03 .
+
+wiki:Folklore dct:title "Folklore" ;
+    ns1:pageRank 3.022912e-03 .
+
+wiki:Free_will dct:title "Free will" ;
+    ns1:pageRank 2.513195e-03 .
+
+wiki:Fun_\(band\) dct:title "Fun (band)" ;
+    rdfs:subClassOf dbpt:Agent,
+        dbpt:Artist,
+        dbpt:Band,
+        dbpt:MusicalArtist,
+        dbpt:Organisation,
+        dbpt:Person ;
+    ns1:pageRank 7.841635e-04 .
+
+wiki:Further_education dct:title "Further education" ;
+    ns1:pageRank 1.406589e-03 .
+
+wiki:Glossary_of_ballet dct:title "Glossary of ballet" ;
+    ns1:pageRank 1.731801e-04 .
+
+wiki:Glossary_of_professional_wrestling_terms dct:title "Glossary of professional wrestling terms" ;
+    rdfs:subClassOf dbpt:Place,
+        dbpt:PopulatedPlace,
+        dbpt:Settlement ;
+    ns1:pageRank 5.99865e-04 .
+
+wiki:Going-to_future dct:title "Going-to future" ;
+    ns1:pageRank 2.395462e-04 .
+
+wiki:Going_\(horse_racing\) dct:title "Going (horse racing)" ;
+    ns1:pageRank 7.479858e-05 .
+
+wiki:Grader dct:title "Grader" ;
+    ns1:pageRank 1.025682e-03 .
+
+wiki:Grand_jury dct:title "Grand jury" ;
+    ns1:pageRank 2.086634e-03 .
+
+wiki:Guide dct:title "Guide" ;
+    ns1:pageRank 7.813936e-04 .
+
+wiki:Has_\(region\) dct:title "Has (region)" ;
+    ns1:pageRank 1.152622e-04 .
+
+wiki:Hearing_loss dct:title "Hearing loss" ;
+    ns1:pageRank 1.722618e-03 .
+
+wiki:Highway dct:title "Highway" ;
+    ns1:pageRank 2.30243e-03 .
+
+wiki:Hiking dct:title "Hiking" ;
+    ns1:pageRank 2.063746e-03 .
+
+wiki:Historic_preservation dct:title "Historic preservation" ;
+    ns1:pageRank 2.28806e-03 .
+
+wiki:History dct:title "History" ;
+    ns1:pageRank 3.400796e-03 .
+
+wiki:History_of_the_United_States dct:title "History of the United States" ;
+    ns1:pageRank 5.54464e-03 .
+
+wiki:Hope dct:title "Hope" ;
+    ns1:pageRank 1.365299e-03 .
+
+wiki:Hour dct:title "Hour" ;
+    ns1:pageRank 9.154773e-04 .
+
+wiki:Implicit_memory dct:title "Implicit memory" ;
+    ns1:pageRank 4.870921e-04 .
+
+wiki:Important_Bird_Area dct:title "Important Bird Area" ;
+    ns1:pageRank 7.594643e-04 .
+
+wiki:Index_term dct:title "Index term" ;
+    ns1:pageRank 1.021069e-03 .
+
+wiki:Infrared dct:title "Infrared" ;
+    ns1:pageRank 1.973731e-03 .
+
+wiki:Interrogative_word dct:title "Interrogative word" ;
+    ns1:pageRank 4.577407e-04 .
+
+wiki:Intimate_relationship dct:title "Intimate relationship" ;
+    ns1:pageRank 1.185783e-03 .
+
+wiki:Invasion_of_Poland dct:title "Invasion of Poland" ;
+    rdfs:subClassOf dbpt:Event,
+        dbpt:MilitaryConflict ;
+    ns1:pageRank 1.723107e-03 .
+
+wiki:Inventive_step_and_non-obviousness dct:title "Inventive step and non-obviousness" ;
+    ns1:pageRank 1.914883e-04 .
+
+wiki:Kom%c3%a1rom_County dct:title "Komárom County" ;
+    rdfs:subClassOf dbpt:AdministrativeRegion,
+        dbpt:Place,
+        dbpt:PopulatedPlace,
+        dbpt:Region ;
+    ns1:pageRank 6.755123e-05 .
+
+wiki:Last_words dct:title "Last words" ;
+    ns1:pageRank 9.211789e-04 .
+
+wiki:Lawyer dct:title "Lawyer" ;
+    ns1:pageRank 3.506012e-03 .
+
+wiki:Leaf dct:title "Leaf" ;
+    rdfs:subClassOf dbpt:Agent,
+        dbpt:Company,
+        dbpt:Organisation,
+        dbpt:RecordLabel ;
+    ns1:pageRank 1.117074e-03 .
+
+wiki:Life dct:title "Life" ;
+    ns1:pageRank 2.579195e-03 .
+
+wiki:Life_\(magazine\) dct:title "Life (magazine)" ;
+    rdfs:subClassOf dbpt:Magazine,
+        dbpt:Newspaper,
+        dbpt:PeriodicalLiterature,
+        dbpt:Work,
+        dbpt:WrittenWork ;
+    ns1:pageRank 3.081693e-03 .
+
+wiki:List_of_TCP_and_UDP_port_numbers dct:title "List of TCP and UDP port numbers" ;
+    ns1:pageRank 1.524001e-04 .
+
+wiki:List_of_U%2eS%2e_states_by_date_of_admission_to_the_Union dct:title "List of U.S. states by date of admission to the Union" ;
+    ns1:pageRank 1.443029e-03 .
+
+wiki:List_of_association_football_rivalries dct:title "List of association football rivalries" ;
+    ns1:pageRank 9.859879e-05 .
+
+wiki:Logical_conjunction dct:title "Logical conjunction" ;
+    ns1:pageRank 9.246758e-04 .
+
+wiki:Looking_\(TV_series\) dct:title "Looking (TV series)" ;
+    ns1:pageRank 4.449234e-04 .
+
+wiki:Lost_film dct:title "Lost film" ;
+    ns1:pageRank 9.923859e-04 .
+
+<http://en.wikipedia.org/wiki/Mary,_mother_of_Jesus> dct:title "Mary, mother of Jesus" ;
+    ns1:pageRank 2.05389e-03 .
+
+wiki:Massachusetts dct:title "Massachusetts" ;
+    rdfs:subClassOf dbpt:AdministrativeRegion,
+        dbpt:Place,
+        dbpt:PopulatedPlace,
+        dbpt:Region,
+        dbpt:State ;
+    ns1:pageRank 7.659428e-03 .
+
+wiki:Me_\(mythology\) dct:title "Me (mythology)" ;
+    ns1:pageRank 2.788354e-04 .
+
+wiki:Meadow dct:title "Meadow" ;
+    ns1:pageRank 3.319627e-03 .
+
+wiki:Mean dct:title "Mean" ;
+    ns1:pageRank 2.124346e-03 .
+
+wiki:Minutemen dct:title "Minutemen" ;
+    rdfs:subClassOf dbpt:Agent,
+        dbpt:MilitaryUnit,
+        dbpt:Organisation ;
+    ns1:pageRank 6.258454e-03 .
+
+wiki:Minutemen_\(band\) dct:title "Minutemen (band)" ;
+    rdfs:subClassOf dbpt:Agent,
+        dbpt:Artist,
+        dbpt:Band,
+        dbpt:MusicalArtist,
+        dbpt:Organisation,
+        dbpt:Person ;
+    ns1:pageRank 3.955695e-03 .
+
+wiki:Mother dct:title "Mother" ;
+    rdfs:subClassOf dbpt:Agent,
+        dbpt:Person ;
+    ns1:pageRank 1.960101e-03 .
+
+wiki:Multiverse dct:title "Multiverse" ;
+    ns1:pageRank 1.19419e-03 .
+
+wiki:Navigation dct:title "Navigation" ;
+    ns1:pageRank 2.965339e-03 .
+
+wiki:Now_\(newspaper\) dct:title "Now (newspaper)" ;
+    rdfs:subClassOf dbpt:Magazine,
+        dbpt:PeriodicalLiterature,
+        dbpt:Work,
+        dbpt:WrittenWork ;
+    ns1:pageRank 1.17939e-03 .
+
+wiki:Object_\(philosophy\) dct:title "Object (philosophy)" ;
+    ns1:pageRank 1.621315e-03 .
+
+wiki:Old_World dct:title "Old World" ;
+    rdfs:subClassOf dbpt:AdministrativeRegion,
+        dbpt:Place,
+        dbpt:PopulatedPlace,
+        dbpt:Region ;
+    ns1:pageRank 2.261292e-03 .
+
+wiki:One_Day_International dct:title "One Day International" ;
+    ns1:pageRank 6.984666e-04 .
+
+wiki:Orthopedic_surgery dct:title "Orthopedic surgery" ;
+    ns1:pageRank 9.141534e-03 .
+
+wiki:Ownership dct:title "Ownership" ;
+    ns1:pageRank 1.916783e-03 .
+
+wiki:Parity_\(mathematics\) dct:title "Parity (mathematics)" ;
+    ns1:pageRank 8.091825e-04 .
+
+wiki:Peace dct:title "Peace" ;
+    ns1:pageRank 2.580606e-03 .
+
+wiki:Physics_beyond_the_Standard_Model dct:title "Physics beyond the Standard Model" ;
+    ns1:pageRank 2.732883e-04 .
+
+wiki:Present dct:title "Present" ;
+    ns1:pageRank 1.2168e-03 .
+
+wiki:Public_speaking dct:title "Public speaking" ;
+    ns1:pageRank 3.102276e-03 .
+
+wiki:Question dct:title "Question" ;
+    ns1:pageRank 9.330282e-04 .
+
+wiki:Quickening dct:title "Quickening" ;
+    ns1:pageRank 3.633517e-04 .
+
+wiki:Race_and_ethnicity_in_the_United_States_census dct:title "Race and ethnicity in the United States census" ;
+    ns1:pageRank 9.786529e-03 .
+
+wiki:Rock_\(geology\) dct:title "Rock (geology)" ;
+    ns1:pageRank 2.64361e-03 .
+
+wiki:Royal_we dct:title "Royal we" ;
+    ns1:pageRank 5.715485e-04 .
+
+wiki:Running_back dct:title "Running back" ;
+    ns1:pageRank 1.640975e-03 .
+
+wiki:September_11_attacks dct:title "September 11 attacks" ;
+    rdfs:subClassOf dbpt:Event,
+        dbpt:MilitaryConflict ;
+    ns1:pageRank 3.708733e-03 .
+
+wiki:Sexual_dimorphism dct:title "Sexual dimorphism" ;
+    ns1:pageRank 1.082768e-03 .
+
+wiki:She_\(pronoun\) dct:title "She (pronoun)" ;
+    ns1:pageRank 5.216894e-04 .
+
+wiki:Singular_they dct:title "Singular they" ;
+    ns1:pageRank 9.056741e-04 .
+
+wiki:So_\(dairy_product\) dct:title "So (dairy product)" ;
+    ns1:pageRank 4.188205e-05 .
+
+wiki:Social_class dct:title "Social class" ;
+    ns1:pageRank 3.446801e-03 .
+
+wiki:Sort_\(typesetting\) dct:title "Sort (typesetting)" ;
+    ns1:pageRank 4.530467e-04 .
+
+wiki:Speech dct:title "Speech" ;
+    ns1:pageRank 2.319138e-03 .
+
+wiki:Spinning_\(textiles\) dct:title "Spinning (textiles)" ;
+    ns1:pageRank 1.549925e-03 .
+
+wiki:Startup_company dct:title "Startup company" ;
+    ns1:pageRank 1.865482e-03 .
+
+wiki:Take dct:title "Take" ;
+    ns1:pageRank 5.852438e-04 .
+
+wiki:Talk_radio dct:title "Talk radio" ;
+    ns1:pageRank 1.908496e-03 .
+
+wiki:Tangent dct:title "Tangent" ;
+    ns1:pageRank 2.895604e-03 .
+
+wiki:Thought dct:title "Thought" ;
+    ns1:pageRank 2.069984e-03 .
+
+wiki:Time dct:title "Time" ;
+    rdfs:subClassOf dbpt:Company,
+        dbpt:RecordLabel ;
+    ns1:pageRank 2.979664e-03 .
+
+wiki:Torque dct:title "Torque" ;
+    ns1:pageRank 1.60502e-03 .
+
+wiki:Tour_guide dct:title "Tour guide" ;
+    ns1:pageRank 1.726544e-03 .
+
+wiki:Tourism dct:title "Tourism" ;
+    ns1:pageRank 3.013611e-03 .
+
+wiki:Traffic_stop dct:title "Traffic stop" ;
+    ns1:pageRank 7.902777e-04 .
+
+wiki:Trial dct:title "Trial" ;
+    ns1:pageRank 1.740966e-03 .
+
+wiki:Truth dct:title "Truth" ;
+    ns1:pageRank 2.38302e-03 .
+
+wiki:Understanding dct:title "Understanding" ;
+    rdfs:subClassOf dbpt:Album,
+        dbpt:MusicalWork,
+        dbpt:Work ;
+    ns1:pageRank 1.649906e-03 .
+
+wiki:United_States dct:title "United States" ;
+    rdfs:subClassOf dbpt:Country,
+        dbpt:Place,
+        dbpt:PopulatedPlace ;
+    ns1:pageRank 5.401388e-03 .
+
+wiki:University dct:title "University" ;
+    ns1:pageRank 3.26849e-03 .
+
+wiki:Unix-like dct:title "Unix-like" ;
+    rdfs:subClassOf dbpt:Software,
+        dbpt:Work ;
+    ns1:pageRank 6.883404e-04 .
+
+wiki:Want dct:title "Want" ;
+    ns1:pageRank 4.802035e-04 .
+
+wiki:Weaving dct:title "Weaving" ;
+    ns1:pageRank 2.596981e-03 .
+
+wiki:Week dct:title "Week" ;
+    ns1:pageRank 9.96451e-04 .
+
+wiki:What dct:title "What" ;
+    ns1:pageRank 1.995336e-05 .
+
+wiki:Whatever_\(slang\) dct:title "Whatever (slang)" ;
+    ns1:pageRank 1.53268e-04 .
+
+wiki:World_Trade_Center_site dct:title "World Trade Center site" ;
+    rdfs:subClassOf dbpt:Place,
+        dbpt:PopulatedPlace ;
+    ns1:pageRank 1.325159e-03 .
+
+wiki:Year dct:title "Year" ;
+    ns1:pageRank 1.533967e-03 .
+
