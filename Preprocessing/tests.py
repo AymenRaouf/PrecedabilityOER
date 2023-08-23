@@ -7,7 +7,7 @@ def test_id_logicS(csv_file):
 
     unique_sid = df['Sid'].nunique()
     total_sid = len(df)
-    if unique_sid == total_sid :
+    if unique_sid == total_sid  :
         print("Test : Uniqueness of identifers sid - PASS")
         sid = True
     else :
