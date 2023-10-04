@@ -2,7 +2,19 @@ from torch_geometric.nn import HeteroConv, GCNConv, GATConv, Linear
 from torch_geometric.data import HeteroData
 import torch.nn.functional as F
 from torch import Tensor
+import numpy as np
 import torch
+import random
+import os
+
+def seed_everything(seed=0):                                                  
+       random.seed(seed)                                                            
+       torch.manual_seed(seed)                                                      
+       torch.cuda.manual_seed_all(seed)                                             
+       np.random.seed(seed)                                                         
+       os.environ['PYTHONHASHSEED'] = str(seed)                                     
+       torch.backends.cudnn.deterministic = True                                    
+       torch.backends.cudnn.benchmark = False
 
 class Modelv1(torch.nn.Module):
     def __init__(self, hidden_channels, out_channels, num_layers):

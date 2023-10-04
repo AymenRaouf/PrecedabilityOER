@@ -105,7 +105,7 @@ def embeddings(sentences, resources, methods, save = False, path = ''):
     if 'BERT' in methods:
         embeddings_df['BERT'] = bert_embeddings(sentences)
     if 'EMBEDD-ER' in methods:
-        embeddings_df['EMBEDD-ER'] = embedder_embeddings(resources, d = 100)
+        embeddings_df['EMBEDD-ER'] = embedder_embeddings(resources, d = 300)
 
     if save:
         embeddings_df.to_csv(path+"embeddings.csv", sep = '|')

@@ -1,4 +1,4 @@
-from sklearn.metrics import roc_auc_score, precision_score, accuracy_score, roc_curve, auc, f1_score
+from sklearn.metrics import roc_auc_score, precision_score, accuracy_score, roc_curve, auc, f1_score, recall_score
 import torch.nn.functional as F
 import pandas as pd
 import numpy as np
@@ -63,9 +63,11 @@ def predict(model, test_data):
     precision = precision_score(ground_truths, preds_labels, zero_division = np.nan)
     accuracy = accuracy_score(ground_truths, preds_labels)
     f1 = f1_score(ground_truths, preds_labels, average='macro')
+    recall = recall_score(ground_truths, preds_labels, average='macro')
     return {
-        "AUC" : auc_score,
-        "Precision" : precision,
-        "Accuracy" : accuracy,
+        'AUC' : auc_score,
+        'Precision' : precision,
+        'Accuracy' : accuracy,
+        'Recall' : recall,
         'F1' : f1
     }
