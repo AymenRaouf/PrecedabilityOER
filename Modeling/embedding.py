@@ -1,6 +1,8 @@
 import pandas as pd
 from simpletransformers.language_representation import RepresentationModel
 from gensim.models import KeyedVectors
+from gensim.models import FastText
+from gensim.test.utils import common_texts
 import numpy as np
 import rdflib
 import os
@@ -97,6 +99,10 @@ def bert_embeddings(sentences):
     
     return sentences_vector_bert
 
+def fasttext_embeddings(sentences, n_gram, window, size, epochs):
+    fasttext = FastText(vector_size = size, window = window, min_count = 1, min_n = n_gram, sentences = common_texts, epochs = 10)
+    sentences_vector_fasttext = list(fasttext.wv[sentences])
+    return sentences_vector_fasttext
 
 def embeddings(sentences, resources, methods, save = False, path = ''):
 
@@ -106,6 +112,8 @@ def embeddings(sentences, resources, methods, save = False, path = ''):
         embeddings_df['BERT'] = bert_embeddings(sentences)
     if 'EMBEDD-ER' in methods:
         embeddings_df['EMBEDD-ER'] = embedder_embeddings(resources, d = 300)
+    if 'FastText' in methods:
+        embeddings_df['FastText'] = fasttext_embeddings(sentences, n_gram = 3, window = 5, size = 300, epochs = 10)
 
     if save:
         embeddings_df.to_csv(path+"embeddings.csv", sep = '|')

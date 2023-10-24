@@ -1,5 +1,7 @@
 Data/
 .env
+.gitignore
 Output/Graphs
 clara-datasets/
 Modeling/models
+Baselines/cc.en.300.bin
