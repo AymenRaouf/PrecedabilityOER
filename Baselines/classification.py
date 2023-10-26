@@ -49,11 +49,12 @@ def classify(X,Y):
 
 def classify_cv(X,Y):
 
-    results = {}
-
-    print("Logistic Regression - L2 :")
+    results = []
+    
+    result = {}
+    print("Logistic Regression")
     param_logistic_regression = {
-        'random_state' : [0],
+        'random_state' : [0],   
         'max_iter': [300], 
         }
     logistic_regression = GridSearchCV(LogisticRegression(), param_logistic_regression, cv = 5, scoring = 'accuracy')
@@ -62,9 +63,14 @@ def classify_cv(X,Y):
     print("%0.2f mean accuracy\n %0.2f max accuracy\n %0.2f min accuracy\n %0.2f standard deviation" % 
         (scores.mean(), scores.max(), scores.min(), scores.std()))
     print(logistic_regression.best_params_)
-    results['Logistic Regression'] = round(scores.mean(), 2)
+    result['Accuracy Max'] = round(scores.max(), 2)
+    result['Accuracy Avg'] = round(scores.mean(), 2)
+    result['Accuracy Min'] = round(scores.min(), 2)
+    result['Model'] = "Logistic Regression"
+    results.append(result)
     print("====================================================")
 
+    result = {}
     print("Decision Tree :")
     param_decision_tree = {
         'random_state' : [0],
@@ -78,9 +84,14 @@ def classify_cv(X,Y):
     print("%0.2f mean accuracy\n %0.2f max accuracy\n %0.2f min accuracy\n %0.2f standard deviation" % 
         (scores.mean(), scores.max(), scores.min(), scores.std()))
     print(decision_tree.best_params_)
-    results['Decision tree'] = round(scores.mean(), 2)
+    result['Accuracy Max'] = round(scores.max(), 2)
+    result['Accuracy Avg'] = round(scores.mean(), 2)
+    result['Accuracy Min'] = round(scores.min(), 2)
+    result['Model'] = "Decision Tree"
+    results.append(result)
     print("====================================================")
 
+    result = {}
     print("Random Forest :")
     param_random_forest = {
         'random_state' : [0],
@@ -94,33 +105,69 @@ def classify_cv(X,Y):
     print("%0.2f mean accuracy\n %0.2f max accuracy\n %0.2f min accuracy\n %0.2f standard deviation" % 
         (scores.mean(), scores.max(), scores.min(), scores.std()))
     print(random_forest.best_params_)
-    results['Random Forest'] = round(scores.mean(), 2)
+    result['Accuracy Max'] = round(scores.max(), 2)
+    result['Accuracy Avg'] = round(scores.mean(), 2)
+    result['Accuracy Min'] = round(scores.min(), 2)
+    result['Model'] = "Random Forest"
+    results.append(result)
     print("====================================================")
     
+    result = {}
     print("SVM :")
-    param_svm = [
-        {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
-        {'C': [1, 10, 100, 1000], 'gamma': [0.01, 0.001, 0.0001], 'kernel': ['rbf']},
-    ]
-    #svm = make_pipeline(StandardScaler(), SVC(gamma='auto'))
+    param_svm = {
+        'C': [1, 10, 100, 1000], 
+        'kernel': ['linear']
+    }
     svm = GridSearchCV(SVC(), param_svm, cv = 5, scoring='accuracy')
     svm.fit(X,Y)
     scores = cross_val_score(svm.best_estimator_, X, Y, cv = 5)
     print("%0.2f mean accuracy\n %0.2f max accuracy\n %0.2f min accuracy\n %0.2f standard deviation" % 
         (scores.mean(), scores.max(), scores.min(), scores.std()))
     print(svm.best_params_)
-    results['SVM'] = round(scores.mean(), 2)
+    result['Accuracy Max'] = round(scores.max(), 2)
+    result['Accuracy Avg'] = round(scores.mean(), 2)
+    result['Accuracy Min'] = round(scores.min(), 2)
+    result['Model'] = "SVM"
+    results.append(result)
     print("====================================================")
 
+    result = {}
+    print("RBF :")
+    param_svm = {
+        'C': [1, 10, 100, 1000], 
+        'gamma': [0.1, 0.01, 0.001, 0.0001], 
+        'kernel': ['rbf']
+    }
+    svm = GridSearchCV(SVC(), param_svm, cv = 5, scoring='accuracy')
+    svm.fit(X,Y)
+    scores = cross_val_score(svm.best_estimator_, X, Y, cv = 5)
+    print("%0.2f mean accuracy\n %0.2f max accuracy\n %0.2f min accuracy\n %0.2f standard deviation" % 
+        (scores.mean(), scores.max(), scores.min(), scores.std()))
+    print(svm.best_params_)
+    result['Accuracy Max'] = round(scores.max(), 2)
+    result['Accuracy Avg'] = round(scores.mean(), 2)
+    result['Accuracy Min'] = round(scores.min(), 2)
+    result['Model'] = "RBF"
+    results.append(result)
+    print("====================================================")
+
+
+    result = {}
     print("Gaussian Naive Bayes :")
     gnb = GaussianNB()
     gnb.fit(X,Y)
     scores = cross_val_score(gnb, X, Y, cv = 5)
     print("%0.2f mean accuracy\n %0.2f max accuracy\n %0.2f min accuracy\n %0.2f standard deviation" % 
         (scores.mean(), scores.max(), scores.min(), scores.std()))
-    results['GNB'] = round(scores.mean(), 2)
+    #print(gnb.best_params_)
+    result['Accuracy Max'] = round(scores.max(), 2)
+    result['Accuracy Avg'] = round(scores.mean(), 2)
+    result['Accuracy Min'] = round(scores.min(), 2)
+    result['Model'] = "GNB"
+    results.append(result)
     print("====================================================")
 
+    result = {}
     print("KNN :")
     param_knn = {
         'n_neighbors': [5, 7, 10, 20], 
@@ -132,6 +179,10 @@ def classify_cv(X,Y):
     print("%0.2f mean accuracy\n %0.2f max accuracy\n %0.2f min accuracy\n %0.2f standard deviation" % 
         (scores.mean(), scores.max(), scores.min(), scores.std()))
     print(knn.best_params_)
-    results['KNN'] = round(scores.mean(), 2)
+    result['Accuracy Max'] = round(scores.max(), 2)
+    result['Accuracy Avg'] = round(scores.mean(), 2)
+    result['Accuracy Min'] = round(scores.min(), 2)
+    result['Model'] = "KNN"
+    results.append(result)
     print("====================================================")
     return results
