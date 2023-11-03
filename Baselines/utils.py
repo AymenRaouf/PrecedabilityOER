@@ -37,7 +37,7 @@ def train(model, train_data, epochs, lr, verbose = False):
         pred = model(train_data)
         ground_truth = train_data["OER", "before_sr", "OER"].edge_label
         assert pred.shape == ground_truth.shape, f'ERROR : Shapes differ between prediction and ground truth ! ({pred.shape, ground_truth.shape})'
-        loss = F.binary_cross_entropy_with_logits(pred, ground_truth)
+        loss = F.binary_cross_entropy_with_logits(pred.float(), ground_truth.float())
         loss.backward()
         optimizer.step()
         total_loss += float(loss)
@@ -59,13 +59,13 @@ def predict(model, test_data):
     preds_labels = (preds > 0.5) * 1
     ground_truths = test_data["OER", "before_sr", "OER"].edge_label
     assert preds.shape == ground_truths.shape, f'ERROR : Shapes differ between prediction and ground truth ! ({preds.shape, ground_truths.shape})'
-    auc_score = roc_auc_score(ground_truths, preds)
+    #auc_score = roc_auc_score(ground_truths, preds)
     precision = precision_score(ground_truths, preds_labels, zero_division = np.nan)
     accuracy = accuracy_score(ground_truths, preds_labels)
     f1 = f1_score(ground_truths, preds_labels, average='macro')
     recall = recall_score(ground_truths, preds_labels, average='macro')
     return {
-        'AUC' : auc_score,
+        #'AUC' : auc_score,
         'Precision' : precision,
         'Accuracy' : accuracy,
         'Recall' : recall,
