@@ -5,6 +5,23 @@ import json
 import time
 
 
+def segment_text(text, max_characters):
+    words = text.split()
+    segments = []
+    current_segment = []
+
+    for word in words:
+        if sum(len(w) for w in current_segment) + len(current_segment) + len(word) <= max_characters:
+            current_segment.append(word)
+        else:
+            segments.append(" ".join(current_segment))
+            current_segment = [word]
+
+    if current_segment:
+        segments.append(" ".join(current_segment))
+
+    return segments
+
 def text2Wikifier(text, threshold, lang="en"):
     '''
     Calls wikifier on the text
@@ -15,27 +32,34 @@ def text2Wikifier(text, threshold, lang="en"):
     Output :
         Dictionary containing Wikifier's response
     '''
-    # prepare the request
-    data = urllib.parse.urlencode([
-        ("text", text), ("lang", lang),
-        ("userKey", "czgzhhslecgukacypvglbujzfmsdkm"),
-        ("pageRankSqThreshold", "%g" % threshold), ("applyPageRankSqThreshold", "true"),
-        ("nTopDfValuesToIgnore", "200"), ("nWordsToIgnoreFromList", "200"),
-        ("wikiDataClasses", "true"), ("wikiDataClassIds", "false"),
-        ("support", "false"), ("ranges", "false"), ("minLinkFrequency", "2"),
-        ("includeCosines", "true"), ("maxMentionEntropy", "3")
-        ])
-    url = "http://www.wikifier.org/annotate-article"
 
-    # call Wikifier and read the response.
-    req = urllib.request.Request(url, data = data.encode("utf8"), method = "POST")
-    with urllib.request.urlopen(req, timeout = 60) as f:
-        response = f.read()
-        response = json.loads(response.decode("utf8"))
+    results = []
+    url = "http://www.wikifier.org/annotate-article"
+    max_characters = 10000
+    if (len(text) >= max_characters):
+        texts = segment_text(text, max_characters)
+    for text in texts :
+        # prepare the request
+        data = urllib.parse.urlencode([
+            ("text", text), ("lang", lang),
+            ("userKey", "czgzhhslecgukacypvglbujzfmsdkm"),
+            ("pageRankSqThreshold", "%g" % threshold), ("applyPageRankSqThreshold", "true"),
+            ("nTopDfValuesToIgnore", "200"), ("nWordsToIgnoreFromList", "200"),
+            ("wikiDataClasses", "true"), ("wikiDataClassIds", "false"),
+            ("support", "false"), ("ranges", "false"), ("minLinkFrequency", "2"),
+            ("includeCosines", "true"), ("maxMentionEntropy", "3")
+            ])
+
+        # call Wikifier and read the response.
+        req = urllib.request.Request(url, data = data.encode("utf8"), method = "POST")
+        with urllib.request.urlopen(req, timeout = 60) as f:
+            response = f.read()
+            response = json.loads(response.decode("utf8"))
+            results = results + response["annotations"]
 
     # return the Wikifier response if it contains a body (concepts)
     try :
-        return response["annotations"]
+        return results
     except KeyError :
         return None
 
