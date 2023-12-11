@@ -36,8 +36,8 @@ def text2Wikifier(text, threshold, lang="en"):
     results = []
     url = "http://www.wikifier.org/annotate-article"
     max_characters = 10000
-    if (len(text) >= max_characters):
-        texts = segment_text(text, max_characters)
+    texts = segment_text(text, max_characters)
+    
     for text in texts :
         # prepare the request
         data = urllib.parse.urlencode([
