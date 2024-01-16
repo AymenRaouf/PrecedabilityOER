@@ -141,7 +141,7 @@ def series_gen(csv_file, sid, eid, cid, save = True):
         df.to_csv('series.csv', index = False, sep = '|')
 
 
-def episodes_gen(channel_name, episodes, chapters, playlist_id, sid, eid_final, cid, save = True):
+def episodes_gen(channel_name, episodes, chapters, playlist_id, sid, eid, eid_final, cid, save = True):
     """
     Description : Generates data for episodes from a playlist.
 
@@ -164,7 +164,8 @@ def episodes_gen(channel_name, episodes, chapters, playlist_id, sid, eid_final, 
     episode_names = []
     number = 0
     n = number + 1
-    api_key = os.getenv('GOOGLE_API_KEY')
+    #api_key = os.getenv('GOOGLE_API_KEY')
+    api_key = 'AIzaSyBiBjA_6N7zhYaXwHelnjNoOk_X760yBQ4'
     youtube = build('youtube', 'v3', developerKey=api_key)
 
     try:
@@ -241,7 +242,7 @@ def episodes_gen(channel_name, episodes, chapters, playlist_id, sid, eid_final, 
     return len(episodes)
 
 
-def chapters_gen(channel_name, chapters, video_id, sid, eid, cid, cid_final, save = True):
+def chapters_gen(channel_name, chapters, video_id, episode_name, sid, eid, cid, cid_final, save = True, max_time = 3600):
     """
     Description : Generates data for chapters from a YouTube video.
 
@@ -274,80 +275,79 @@ def chapters_gen(channel_name, chapters, video_id, sid, eid, cid, cid_final, sav
     current_start = 0
     current_end = 0
     min_segment_duration = 20 * 60
-
-    unwanted_words = ['\n', '\t', '\r', '|', '[PROFESSOR]', '[Voiceover]', '[AUDIENCE]', '[APPLAUSE]', '[INAUDIBLE]']
-
+    unwanted_words = ['\n', '\t', '\r', '|', '[PROFESSOR]', '[Voiceover]', '[AUDIENCE]', '[APPLAUSE]', '[INAUDIBLE]', '[Instructor]']
+    title = None
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en-GB', 'en'])
-        total_duration_seconds = transcript[-1]['start'] + transcript[-1]['duration']
+        title = get_video_title(video_id)
+        if transcript :
+            total_duration_seconds = transcript[-1]['start']
+            if total_duration_seconds > max_time:
+                print(f'Extracting subtitles for video {cid_final} with id {video_id} and dividing it')
+                # Divide the transcript into segments of a specified minimal duration
+                for line in transcript:
+                    text = line['text']
+                    duration = line['duration']
+                    start = line['start']
+                    end = start + duration
 
-        if transcript and total_duration_seconds > 3600:
-            print(f'Extracting subtitles for video n° {cid_final} and dividing it')
-            # Divide the transcript into segments of a specified minimal duration
-            for line in transcript:
-                text = line['text']
-                duration = line['duration']
-                start = line['start']
-                end = start + duration
+                    if current_duration + duration > min_segment_duration:
+                        current_segment += text + ' '
+                        current_duration += duration
 
-                if current_duration + duration > min_segment_duration:
-                    current_segment += text + ' '
-                    current_duration += duration
+                        if text.endswith(('.', '!', '?')):
+                            # Add the segment to the segments' list
+                            segments.append((current_segment.strip(), current_start, current_end))
+                            current_segment = ''
+                            current_duration = 0
+                            current_start = 0
+                            current_end = 0
 
-                    if text.endswith(('.', '!', '?')):
-                        # Add the segment to the segments' list
-                        segments.append((current_segment.strip(), current_start, current_end))
-                        current_segment = ''
-                        current_duration = 0
-                        current_start = 0
-                        current_end = 0
+                    else:
+                        if current_duration == 0:
+                            current_start = start
 
-                else:
-                    if current_duration == 0:
-                        current_start = start
+                        current_segment += text + ' '
+                        current_duration += duration
+                        current_end = end
 
-                    current_segment += text + ' '
-                    current_duration += duration
-                    current_end = end
+                title_number = 0
+                num_parts = len(segments)
+                remaining_duration = total_duration_seconds - segments[-1][1]
 
-            title_number = 0
-            num_parts = len(segments)
-            remaining_duration = total_duration_seconds - segments[-1][1]
+                title = get_video_title(video_id)
 
-            video_title = get_video_title(video_id)
+                # Generate the information of chapters for every segment
+                for i, part in enumerate(segments):
+                    if i < num_parts - 1:
+                        segment_text, segment_start, segment_end = part
+                    else:
+                        segment_text, segment_start, _ = part
+                        segment_end = segment_start + remaining_duration
 
-            # Generate the information of chapters for every segment
-            for i, part in enumerate(segments):
-                if i < num_parts - 1:
-                    segment_text, segment_start, segment_end = part
-                else:
-                    segment_text, segment_start, _ = part
-                    segment_end = segment_start + remaining_duration
+                    for word in unwanted_words:
+                        segment_text = segment_text.replace(word, ' ')
 
-                for word in unwanted_words:
-                    segment_text = segment_text.replace(word, ' ')
+                    start_time = str(datetime.timedelta(seconds=segment_start)).split('.')[0]
+                    end_time = str(datetime.timedelta(seconds=segment_end)).split('.')[0]
 
-                start_time = str(datetime.timedelta(seconds=segment_start)).split('.')[0]
-                end_time = str(datetime.timedelta(seconds=segment_end)).split('.')[0]
+                    # Add chapter information to the chapters' list
+                    chapter = {
+                        'Cid': cid_final,
+                        'Eid': eid,
+                        'Sid': sid,
+                        'Title': f"{title} Part {title_number}".replace('|', ','),
+                        'Text': segment_text,
+                        'BeginTimestamp': start_time,
+                        'EndTimestamp': end_time,
+                        'Corpus': channel_name,
+                    }
+                    chapters.append(chapter)
+                    title_number += 1
+                    cid_final += 1
 
-                # Add chapter information to the chapters' list
-                chapter = {
-                    'Cid': cid_final,
-                    'Eid': eid,
-                    'Sid': sid,
-                    'Title': f"{video_title} Part {title_number}".replace('|', ','),
-                    'Text': segment_text,
-                    'BeginTimestamp': start_time,
-                    'EndTimestamp': end_time,
-                    'Corpus': channel_name,
-                }
-                chapters.append(chapter)
-                title_number += 1
-                cid_final += 1
-
-        else:
-            print(f'Extracting subtitles for video n° {cid_final} without dividing it')
-            try:
+            else:
+                print(f'Extracting subtitles for video {cid_final} with id {video_id} without dividing it')
                 text = ' '.join([line['text'] for line in transcript])
                 cleaned_transcript_text = text
                 for word in unwanted_words:
@@ -356,7 +356,6 @@ def chapters_gen(channel_name, chapters, video_id, sid, eid, cid, cid_final, sav
                 if not cleaned_transcript_text.endswith(('.', '!', '?')):
                     cleaned_transcript_text += '.'
 
-                title = get_video_title(video_id)
                 chapters_info = {
                     'Cid': cid_final,
                     'Eid': eid,
@@ -369,12 +368,35 @@ def chapters_gen(channel_name, chapters, video_id, sid, eid, cid, cid_final, sav
                 }
                 chapters.append(chapters_info)
                 cid_final += 1
-            except Exception as e:
-                print(f"Error retrieving transcript for video {video_id}. Exception type: {type(e)}. Exception message: {str(e)}")
+        else :
+            print(f"Cannot retrieve transcript for video {cid_final} with id {video_id}")
+            chapters_info = {
+                    'Cid': cid_final,
+                    'Eid': eid,
+                    'Sid': sid,
+                    'Title': title.replace('|', ','),
+                    'Text': None,
+                    'BeginTimestamp': str(datetime.timedelta(seconds=0)).split('.')[0],
+                    'EndTimestamp': str(datetime.timedelta(seconds=total_duration_seconds)).split('.')[0],
+                    'Corpus': channel_name,
+                }
+            chapters.append(chapters_info)
+            cid_final += 1
 
     except Exception as e:
-        print(f"Error retrieving transcript for video {video_id}. Exception type: {type(e)}. Exception message: {str(e)}")
-
+        print(f"Error retrieving transcript for video {cid_final} with id {video_id}. \n\tException type: {type(e)}. Exception message: {str(e)}")
+        chapters_info = {
+            'Cid': cid_final,
+            'Eid': eid,
+            'Sid': sid,
+            'Title': title.replace('|', ',') if title else None,
+            'Text': None,
+            'BeginTimestamp': str(datetime.timedelta(seconds=0)).split('.')[0],
+            'EndTimestamp': str(datetime.timedelta(seconds=0)).split('.')[0],
+            'Corpus': channel_name,
+        }
+        chapters.append(chapters_info)
+        cid_final += 1
     num_rows = len(chapters) - cid_start
     if len(chapters) != num_rows:
         print(f"Warning: Number of rows in the 'chapters' file does not match the expected count. Expected: {num_rows}, Actual: {len(chapters)}")

@@ -5,7 +5,6 @@ import numpy as np
 import torch
 import time
 
-torch.manual_seed(0)
 
 def id_mapper(df_col, name):
     unique_id = df_col.unique()
