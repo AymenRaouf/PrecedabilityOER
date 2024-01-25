@@ -1,0 +1,296 @@
+Model|Accuracy|Params|Embedding
+Linear Regression|0.5032258064516129|None|FastText
+SVM|0.49032258064516127|(10, 0.01, 'linear')|FastText
+RBF|0.5096774193548387|(1, 0.1, 'rbf')|FastText
+RBF|0.5419354838709678|(1, 0.01, 'rbf')|FastText
+RBF|0.7096774193548387|(1, 0.001, 'rbf')|FastText
+RBF|0.5096774193548387|(10, 0.1, 'rbf')|FastText
+RBF|0.5548387096774193|(10, 0.01, 'rbf')|FastText
+RBF|0.7096774193548387|(10, 0.001, 'rbf')|FastText
+RBF|0.5096774193548387|(100, 0.1, 'rbf')|FastText
+RBF|0.5548387096774193|(100, 0.01, 'rbf')|FastText
+RBF|0.7225806451612903|(100, 0.001, 'rbf')|FastText
+RF|0.4838709677419355|(0, 1, 50, 'gini')|FastText
+RF|0.4838709677419355|(0, 1, 50, 'entropy')|FastText
+RF|0.4838709677419355|(0, 1, 50, 'log_loss')|FastText
+RF|0.5161290322580645|(0, 1, 100, 'gini')|FastText
+RF|0.5161290322580645|(0, 1, 100, 'entropy')|FastText
+RF|0.5161290322580645|(0, 1, 100, 'log_loss')|FastText
+RF|0.5096774193548387|(0, 1, 150, 'gini')|FastText
+RF|0.5161290322580645|(0, 1, 150, 'entropy')|FastText
+RF|0.5161290322580645|(0, 1, 150, 'log_loss')|FastText
+RF|0.5032258064516129|(0, 1, 200, 'gini')|FastText
+RF|0.5032258064516129|(0, 1, 200, 'entropy')|FastText
+RF|0.5032258064516129|(0, 1, 200, 'log_loss')|FastText
+RF|0.5483870967741935|(0, 2, 50, 'gini')|FastText
+RF|0.5548387096774193|(0, 2, 50, 'entropy')|FastText
+RF|0.5548387096774193|(0, 2, 50, 'log_loss')|FastText
+RF|0.5612903225806452|(0, 2, 100, 'gini')|FastText
+RF|0.5483870967741935|(0, 2, 100, 'entropy')|FastText
+RF|0.5483870967741935|(0, 2, 100, 'log_loss')|FastText
+RF|0.5483870967741935|(0, 2, 150, 'gini')|FastText
+RF|0.535483870967742|(0, 2, 150, 'entropy')|FastText
+RF|0.535483870967742|(0, 2, 150, 'log_loss')|FastText
+RF|0.5548387096774193|(0, 2, 200, 'gini')|FastText
+RF|0.5548387096774193|(0, 2, 200, 'entropy')|FastText
+RF|0.5548387096774193|(0, 2, 200, 'log_loss')|FastText
+RF|0.6387096774193548|(0, 5, 50, 'gini')|FastText
+RF|0.6451612903225806|(0, 5, 50, 'entropy')|FastText
+RF|0.6451612903225806|(0, 5, 50, 'log_loss')|FastText
+RF|0.6387096774193548|(0, 5, 100, 'gini')|FastText
+RF|0.6580645161290323|(0, 5, 100, 'entropy')|FastText
+RF|0.6580645161290323|(0, 5, 100, 'log_loss')|FastText
+RF|0.6193548387096774|(0, 5, 150, 'gini')|FastText
+RF|0.6645161290322581|(0, 5, 150, 'entropy')|FastText
+RF|0.6645161290322581|(0, 5, 150, 'log_loss')|FastText
+RF|0.6516129032258065|(0, 5, 200, 'gini')|FastText
+RF|0.632258064516129|(0, 5, 200, 'entropy')|FastText
+RF|0.632258064516129|(0, 5, 200, 'log_loss')|FastText
+RF|0.6|(0, 10, 50, 'gini')|FastText
+RF|0.6129032258064516|(0, 10, 50, 'entropy')|FastText
+RF|0.6129032258064516|(0, 10, 50, 'log_loss')|FastText
+RF|0.6387096774193548|(0, 10, 100, 'gini')|FastText
+RF|0.6064516129032258|(0, 10, 100, 'entropy')|FastText
+RF|0.6064516129032258|(0, 10, 100, 'log_loss')|FastText
+RF|0.632258064516129|(0, 10, 150, 'gini')|FastText
+RF|0.6516129032258065|(0, 10, 150, 'entropy')|FastText
+RF|0.6516129032258065|(0, 10, 150, 'log_loss')|FastText
+RF|0.6451612903225806|(0, 10, 200, 'gini')|FastText
+RF|0.6580645161290323|(0, 10, 200, 'entropy')|FastText
+RF|0.6580645161290323|(0, 10, 200, 'log_loss')|FastText
+Linear Regression|0.6387096774193548|None|FastText
+SVM|0.5225806451612903|(10, 0.01, 'linear')|FastText
+RBF|0.5483870967741935|(1, 0.1, 'rbf')|FastText
+RBF|0.5935483870967742|(1, 0.01, 'rbf')|FastText
+RBF|0.6838709677419355|(1, 0.001, 'rbf')|FastText
+RBF|0.5483870967741935|(10, 0.1, 'rbf')|FastText
+RBF|0.6193548387096774|(10, 0.01, 'rbf')|FastText
+RBF|0.7354838709677419|(10, 0.001, 'rbf')|FastText
+RBF|0.5483870967741935|(100, 0.1, 'rbf')|FastText
+RBF|0.6193548387096774|(100, 0.01, 'rbf')|FastText
+RBF|0.7612903225806451|(100, 0.001, 'rbf')|FastText
+RF|0.5806451612903226|(0, 1, 50, 'gini')|FastText
+RF|0.5806451612903226|(0, 1, 50, 'entropy')|FastText
+RF|0.5806451612903226|(0, 1, 50, 'log_loss')|FastText
+RF|0.5741935483870968|(0, 1, 100, 'gini')|FastText
+RF|0.567741935483871|(0, 1, 100, 'entropy')|FastText
+RF|0.567741935483871|(0, 1, 100, 'log_loss')|FastText
+RF|0.5806451612903226|(0, 1, 150, 'gini')|FastText
+RF|0.5741935483870968|(0, 1, 150, 'entropy')|FastText
+RF|0.5741935483870968|(0, 1, 150, 'log_loss')|FastText
+RF|0.5741935483870968|(0, 1, 200, 'gini')|FastText
+RF|0.5612903225806452|(0, 1, 200, 'entropy')|FastText
+RF|0.5612903225806452|(0, 1, 200, 'log_loss')|FastText
+RF|0.6193548387096774|(0, 2, 50, 'gini')|FastText
+RF|0.6193548387096774|(0, 2, 50, 'entropy')|FastText
+RF|0.6193548387096774|(0, 2, 50, 'log_loss')|FastText
+RF|0.6193548387096774|(0, 2, 100, 'gini')|FastText
+RF|0.632258064516129|(0, 2, 100, 'entropy')|FastText
+RF|0.632258064516129|(0, 2, 100, 'log_loss')|FastText
+RF|0.6387096774193548|(0, 2, 150, 'gini')|FastText
+RF|0.6451612903225806|(0, 2, 150, 'entropy')|FastText
+RF|0.6451612903225806|(0, 2, 150, 'log_loss')|FastText
+RF|0.632258064516129|(0, 2, 200, 'gini')|FastText
+RF|0.6451612903225806|(0, 2, 200, 'entropy')|FastText
+RF|0.6451612903225806|(0, 2, 200, 'log_loss')|FastText
+RF|0.7354838709677419|(0, 5, 50, 'gini')|FastText
+RF|0.6709677419354839|(0, 5, 50, 'entropy')|FastText
+RF|0.6709677419354839|(0, 5, 50, 'log_loss')|FastText
+RF|0.6903225806451613|(0, 5, 100, 'gini')|FastText
+RF|0.6838709677419355|(0, 5, 100, 'entropy')|FastText
+RF|0.6838709677419355|(0, 5, 100, 'log_loss')|FastText
+RF|0.6774193548387096|(0, 5, 150, 'gini')|FastText
+RF|0.6967741935483871|(0, 5, 150, 'entropy')|FastText
+RF|0.6967741935483871|(0, 5, 150, 'log_loss')|FastText
+RF|0.6838709677419355|(0, 5, 200, 'gini')|FastText
+RF|0.6903225806451613|(0, 5, 200, 'entropy')|FastText
+RF|0.6903225806451613|(0, 5, 200, 'log_loss')|FastText
+RF|0.7161290322580646|(0, 10, 50, 'gini')|FastText
+RF|0.6838709677419355|(0, 10, 50, 'entropy')|FastText
+RF|0.6838709677419355|(0, 10, 50, 'log_loss')|FastText
+RF|0.6709677419354839|(0, 10, 100, 'gini')|FastText
+RF|0.7032258064516129|(0, 10, 100, 'entropy')|FastText
+RF|0.7032258064516129|(0, 10, 100, 'log_loss')|FastText
+RF|0.7096774193548387|(0, 10, 150, 'gini')|FastText
+RF|0.6709677419354839|(0, 10, 150, 'entropy')|FastText
+RF|0.6709677419354839|(0, 10, 150, 'log_loss')|FastText
+RF|0.7032258064516129|(0, 10, 200, 'gini')|FastText
+RF|0.7032258064516129|(0, 10, 200, 'entropy')|FastText
+RF|0.7032258064516129|(0, 10, 200, 'log_loss')|FastText
+Linear Regression|0.6193548387096774|None|FastText
+SVM|0.5612903225806452|(10, 0.01, 'linear')|FastText
+RBF|0.5419354838709678|(1, 0.1, 'rbf')|FastText
+RBF|0.6|(1, 0.01, 'rbf')|FastText
+RBF|0.7677419354838709|(1, 0.001, 'rbf')|FastText
+RBF|0.5419354838709678|(10, 0.1, 'rbf')|FastText
+RBF|0.6129032258064516|(10, 0.01, 'rbf')|FastText
+RBF|0.7548387096774194|(10, 0.001, 'rbf')|FastText
+RBF|0.5419354838709678|(100, 0.1, 'rbf')|FastText
+RBF|0.6129032258064516|(100, 0.01, 'rbf')|FastText
+RBF|0.7677419354838709|(100, 0.001, 'rbf')|FastText
+RF|0.5483870967741935|(0, 1, 50, 'gini')|FastText
+RF|0.5548387096774193|(0, 1, 50, 'entropy')|FastText
+RF|0.5548387096774193|(0, 1, 50, 'log_loss')|FastText
+RF|0.5483870967741935|(0, 1, 100, 'gini')|FastText
+RF|0.5612903225806452|(0, 1, 100, 'entropy')|FastText
+RF|0.5612903225806452|(0, 1, 100, 'log_loss')|FastText
+RF|0.5548387096774193|(0, 1, 150, 'gini')|FastText
+RF|0.5548387096774193|(0, 1, 150, 'entropy')|FastText
+RF|0.5548387096774193|(0, 1, 150, 'log_loss')|FastText
+RF|0.5612903225806452|(0, 1, 200, 'gini')|FastText
+RF|0.5612903225806452|(0, 1, 200, 'entropy')|FastText
+RF|0.5612903225806452|(0, 1, 200, 'log_loss')|FastText
+RF|0.632258064516129|(0, 2, 50, 'gini')|FastText
+RF|0.632258064516129|(0, 2, 50, 'entropy')|FastText
+RF|0.632258064516129|(0, 2, 50, 'log_loss')|FastText
+RF|0.6451612903225806|(0, 2, 100, 'gini')|FastText
+RF|0.6774193548387096|(0, 2, 100, 'entropy')|FastText
+RF|0.6774193548387096|(0, 2, 100, 'log_loss')|FastText
+RF|0.6516129032258065|(0, 2, 150, 'gini')|FastText
+RF|0.6451612903225806|(0, 2, 150, 'entropy')|FastText
+RF|0.6451612903225806|(0, 2, 150, 'log_loss')|FastText
+RF|0.6193548387096774|(0, 2, 200, 'gini')|FastText
+RF|0.632258064516129|(0, 2, 200, 'entropy')|FastText
+RF|0.632258064516129|(0, 2, 200, 'log_loss')|FastText
+RF|0.7290322580645161|(0, 5, 50, 'gini')|FastText
+RF|0.7290322580645161|(0, 5, 50, 'entropy')|FastText
+RF|0.7290322580645161|(0, 5, 50, 'log_loss')|FastText
+RF|0.7354838709677419|(0, 5, 100, 'gini')|FastText
+RF|0.7354838709677419|(0, 5, 100, 'entropy')|FastText
+RF|0.7354838709677419|(0, 5, 100, 'log_loss')|FastText
+RF|0.7225806451612903|(0, 5, 150, 'gini')|FastText
+RF|0.6967741935483871|(0, 5, 150, 'entropy')|FastText
+RF|0.6967741935483871|(0, 5, 150, 'log_loss')|FastText
+RF|0.7161290322580646|(0, 5, 200, 'gini')|FastText
+RF|0.7096774193548387|(0, 5, 200, 'entropy')|FastText
+RF|0.7096774193548387|(0, 5, 200, 'log_loss')|FastText
+RF|0.6967741935483871|(0, 10, 50, 'gini')|FastText
+RF|0.7354838709677419|(0, 10, 50, 'entropy')|FastText
+RF|0.7354838709677419|(0, 10, 50, 'log_loss')|FastText
+RF|0.7290322580645161|(0, 10, 100, 'gini')|FastText
+RF|0.7612903225806451|(0, 10, 100, 'entropy')|FastText
+RF|0.7612903225806451|(0, 10, 100, 'log_loss')|FastText
+RF|0.7161290322580646|(0, 10, 150, 'gini')|FastText
+RF|0.7677419354838709|(0, 10, 150, 'entropy')|FastText
+RF|0.7677419354838709|(0, 10, 150, 'log_loss')|FastText
+RF|0.7161290322580646|(0, 10, 200, 'gini')|FastText
+RF|0.7677419354838709|(0, 10, 200, 'entropy')|FastText
+RF|0.7677419354838709|(0, 10, 200, 'log_loss')|FastText
+Linear Regression|0.6129032258064516|None|FastText
+SVM|0.5419354838709678|(10, 0.01, 'linear')|FastText
+RBF|0.5870967741935483|(1, 0.1, 'rbf')|FastText
+RBF|0.6516129032258065|(1, 0.01, 'rbf')|FastText
+RBF|0.7161290322580646|(1, 0.001, 'rbf')|FastText
+RBF|0.5870967741935483|(10, 0.1, 'rbf')|FastText
+RBF|0.6645161290322581|(10, 0.01, 'rbf')|FastText
+RBF|0.7741935483870968|(10, 0.001, 'rbf')|FastText
+RBF|0.5870967741935483|(100, 0.1, 'rbf')|FastText
+RBF|0.6645161290322581|(100, 0.01, 'rbf')|FastText
+RBF|0.7612903225806451|(100, 0.001, 'rbf')|FastText
+RF|0.6387096774193548|(0, 1, 50, 'gini')|FastText
+RF|0.6645161290322581|(0, 1, 50, 'entropy')|FastText
+RF|0.6645161290322581|(0, 1, 50, 'log_loss')|FastText
+RF|0.5806451612903226|(0, 1, 100, 'gini')|FastText
+RF|0.5935483870967742|(0, 1, 100, 'entropy')|FastText
+RF|0.5935483870967742|(0, 1, 100, 'log_loss')|FastText
+RF|0.5935483870967742|(0, 1, 150, 'gini')|FastText
+RF|0.6|(0, 1, 150, 'entropy')|FastText
+RF|0.6|(0, 1, 150, 'log_loss')|FastText
+RF|0.6|(0, 1, 200, 'gini')|FastText
+RF|0.5935483870967742|(0, 1, 200, 'entropy')|FastText
+RF|0.5935483870967742|(0, 1, 200, 'log_loss')|FastText
+RF|0.6516129032258065|(0, 2, 50, 'gini')|FastText
+RF|0.6451612903225806|(0, 2, 50, 'entropy')|FastText
+RF|0.6451612903225806|(0, 2, 50, 'log_loss')|FastText
+RF|0.6516129032258065|(0, 2, 100, 'gini')|FastText
+RF|0.6258064516129033|(0, 2, 100, 'entropy')|FastText
+RF|0.6258064516129033|(0, 2, 100, 'log_loss')|FastText
+RF|0.6451612903225806|(0, 2, 150, 'gini')|FastText
+RF|0.6129032258064516|(0, 2, 150, 'entropy')|FastText
+RF|0.6129032258064516|(0, 2, 150, 'log_loss')|FastText
+RF|0.6516129032258065|(0, 2, 200, 'gini')|FastText
+RF|0.632258064516129|(0, 2, 200, 'entropy')|FastText
+RF|0.632258064516129|(0, 2, 200, 'log_loss')|FastText
+RF|0.7032258064516129|(0, 5, 50, 'gini')|FastText
+RF|0.7225806451612903|(0, 5, 50, 'entropy')|FastText
+RF|0.7225806451612903|(0, 5, 50, 'log_loss')|FastText
+RF|0.6967741935483871|(0, 5, 100, 'gini')|FastText
+RF|0.7096774193548387|(0, 5, 100, 'entropy')|FastText
+RF|0.7096774193548387|(0, 5, 100, 'log_loss')|FastText
+RF|0.7096774193548387|(0, 5, 150, 'gini')|FastText
+RF|0.7096774193548387|(0, 5, 150, 'entropy')|FastText
+RF|0.7096774193548387|(0, 5, 150, 'log_loss')|FastText
+RF|0.6838709677419355|(0, 5, 200, 'gini')|FastText
+RF|0.6967741935483871|(0, 5, 200, 'entropy')|FastText
+RF|0.6967741935483871|(0, 5, 200, 'log_loss')|FastText
+RF|0.7161290322580646|(0, 10, 50, 'gini')|FastText
+RF|0.6838709677419355|(0, 10, 50, 'entropy')|FastText
+RF|0.6838709677419355|(0, 10, 50, 'log_loss')|FastText
+RF|0.7161290322580646|(0, 10, 100, 'gini')|FastText
+RF|0.6774193548387096|(0, 10, 100, 'entropy')|FastText
+RF|0.6774193548387096|(0, 10, 100, 'log_loss')|FastText
+RF|0.6903225806451613|(0, 10, 150, 'gini')|FastText
+RF|0.6967741935483871|(0, 10, 150, 'entropy')|FastText
+RF|0.6967741935483871|(0, 10, 150, 'log_loss')|FastText
+RF|0.7032258064516129|(0, 10, 200, 'gini')|FastText
+RF|0.6838709677419355|(0, 10, 200, 'entropy')|FastText
+RF|0.6838709677419355|(0, 10, 200, 'log_loss')|FastText
+Linear Regression|0.6387096774193548|None|FastText
+SVM|0.567741935483871|(10, 0.01, 'linear')|FastText
+RBF|0.5935483870967742|(1, 0.1, 'rbf')|FastText
+RBF|0.6451612903225806|(1, 0.01, 'rbf')|FastText
+RBF|0.7354838709677419|(1, 0.001, 'rbf')|FastText
+RBF|0.5935483870967742|(10, 0.1, 'rbf')|FastText
+RBF|0.7096774193548387|(10, 0.01, 'rbf')|FastText
+RBF|0.7419354838709677|(10, 0.001, 'rbf')|FastText
+RBF|0.5935483870967742|(100, 0.1, 'rbf')|FastText
+RBF|0.7096774193548387|(100, 0.01, 'rbf')|FastText
+RBF|0.7419354838709677|(100, 0.001, 'rbf')|FastText
+RF|0.6387096774193548|(0, 1, 50, 'gini')|FastText
+RF|0.6258064516129033|(0, 1, 50, 'entropy')|FastText
+RF|0.6258064516129033|(0, 1, 50, 'log_loss')|FastText
+RF|0.6516129032258065|(0, 1, 100, 'gini')|FastText
+RF|0.6451612903225806|(0, 1, 100, 'entropy')|FastText
+RF|0.6451612903225806|(0, 1, 100, 'log_loss')|FastText
+RF|0.6387096774193548|(0, 1, 150, 'gini')|FastText
+RF|0.6387096774193548|(0, 1, 150, 'entropy')|FastText
+RF|0.6387096774193548|(0, 1, 150, 'log_loss')|FastText
+RF|0.6193548387096774|(0, 1, 200, 'gini')|FastText
+RF|0.6258064516129033|(0, 1, 200, 'entropy')|FastText
+RF|0.6258064516129033|(0, 1, 200, 'log_loss')|FastText
+RF|0.6774193548387096|(0, 2, 50, 'gini')|FastText
+RF|0.6774193548387096|(0, 2, 50, 'entropy')|FastText
+RF|0.6774193548387096|(0, 2, 50, 'log_loss')|FastText
+RF|0.6516129032258065|(0, 2, 100, 'gini')|FastText
+RF|0.6709677419354839|(0, 2, 100, 'entropy')|FastText
+RF|0.6709677419354839|(0, 2, 100, 'log_loss')|FastText
+RF|0.6645161290322581|(0, 2, 150, 'gini')|FastText
+RF|0.6580645161290323|(0, 2, 150, 'entropy')|FastText
+RF|0.6580645161290323|(0, 2, 150, 'log_loss')|FastText
+RF|0.6645161290322581|(0, 2, 200, 'gini')|FastText
+RF|0.6387096774193548|(0, 2, 200, 'entropy')|FastText
+RF|0.6387096774193548|(0, 2, 200, 'log_loss')|FastText
+RF|0.7354838709677419|(0, 5, 50, 'gini')|FastText
+RF|0.7354838709677419|(0, 5, 50, 'entropy')|FastText
+RF|0.7354838709677419|(0, 5, 50, 'log_loss')|FastText
+RF|0.7354838709677419|(0, 5, 100, 'gini')|FastText
+RF|0.7161290322580646|(0, 5, 100, 'entropy')|FastText
+RF|0.7161290322580646|(0, 5, 100, 'log_loss')|FastText
+RF|0.7354838709677419|(0, 5, 150, 'gini')|FastText
+RF|0.7419354838709677|(0, 5, 150, 'entropy')|FastText
+RF|0.7419354838709677|(0, 5, 150, 'log_loss')|FastText
+RF|0.7225806451612903|(0, 5, 200, 'gini')|FastText
+RF|0.7354838709677419|(0, 5, 200, 'entropy')|FastText
+RF|0.7354838709677419|(0, 5, 200, 'log_loss')|FastText
+RF|0.7032258064516129|(0, 10, 50, 'gini')|FastText
+RF|0.6838709677419355|(0, 10, 50, 'entropy')|FastText
+RF|0.6838709677419355|(0, 10, 50, 'log_loss')|FastText
+RF|0.7354838709677419|(0, 10, 100, 'gini')|FastText
+RF|0.7225806451612903|(0, 10, 100, 'entropy')|FastText
+RF|0.7225806451612903|(0, 10, 100, 'log_loss')|FastText
+RF|0.7161290322580646|(0, 10, 150, 'gini')|FastText
+RF|0.7032258064516129|(0, 10, 150, 'entropy')|FastText
+RF|0.7032258064516129|(0, 10, 150, 'log_loss')|FastText
+RF|0.7225806451612903|(0, 10, 200, 'gini')|FastText
+RF|0.7032258064516129|(0, 10, 200, 'entropy')|FastText
+RF|0.7032258064516129|(0, 10, 200, 'log_loss')|FastText

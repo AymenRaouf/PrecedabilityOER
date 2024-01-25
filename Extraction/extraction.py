@@ -278,26 +278,26 @@ def chapters_gen(channel_name, chapters, video_id, episode_name, sid, eid, cid, 
     unwanted_words = ['\n', '\t', '\r', '|', '[PROFESSOR]', '[Voiceover]', '[AUDIENCE]', '[APPLAUSE]', '[INAUDIBLE]', '[Instructor]']
     title = None
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en-GB', 'en'])
+        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en-GB', 'en', 'en-US'])
         title = get_video_title(video_id)
         if transcript :
             total_duration_seconds = transcript[-1]['start']
             if total_duration_seconds > max_time:
                 print(f'Extracting subtitles for video {cid_final} with id {video_id} and dividing it')
                 # Divide the transcript into segments of a specified minimal duration
-                for line in transcript:
+                for i, line in enumerate(transcript):
                     text = line['text']
                     duration = line['duration']
                     start = line['start']
                     end = start + duration
 
-                    if current_duration + duration > min_segment_duration:
+                    if current_duration + duration > min_segment_duration or i + 1 == len(transcript):
                         current_segment += text + ' '
                         current_duration += duration
 
-                        if text.endswith(('.', '!', '?')):
+                        if text.endswith(('.', '!', '?')) or (current_duration > (min_segment_duration + 120)):
                             # Add the segment to the segments' list
-                            segments.append((current_segment.strip(), current_start, current_end))
+                            segments.append((current_segment.strip(), current_start, end))
                             current_segment = ''
                             current_duration = 0
                             current_start = 0
