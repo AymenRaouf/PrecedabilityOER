@@ -1,5 +1,3 @@
-Data : https://anonymfile.com/aDr6/data.zip
-
 # PreSAGE : Precedability Prediction Between Educational Resources
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
