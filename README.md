@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Data
-- The data is found on this [link](https://anonymfile.com/W1bJO/data.zip). It should be downloaded and put in the root of the project directory.
+- The data is found on this [link](https://anonymfile.com/qZZJY/data.zip). It should be downloaded and put in the root of the project directory.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
