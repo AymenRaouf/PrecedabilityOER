@@ -4,7 +4,7 @@
 
 PreSAGE is a two- step method to identify precedability relations between educational resources. Our method structures the educational resources in an enriched Knowledge Graph (KG). Then, it uses a Graph Neural Network (GNN) model to predict precedability relations.
 
-<b>This is the code for the paper recedability Prediction Between Educational Resources</b>
+<b>This is the code for the paper "Precedability Prediction Between Educational Resources"</b>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
