@@ -2,7 +2,9 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-we propose a two- step method to identify precedability relations between educational resources. Our method structures the educational resources in an enriched Knowledge Graph (KG). Then, it uses a Graph Neural Network (GNN) model to predict precedability relations.
+PreSAGE is a two- step method to identify precedability relations between educational resources. Our method structures the educational resources in an enriched Knowledge Graph (KG). Then, it uses a Graph Neural Network (GNN) model to predict precedability relations.
+
+<b>This is the code for the paper recedability Prediction Between Educational Resources</b>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -17,13 +19,12 @@ pip install -r requirements.txt
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Data
-- The data is found on this [link](https://anonymfile.com/Ejj0j/data.zip). It should be downloaded and put in the root of the project directory.
+- Due to the large size of the data folder, we were not able to upload it to Git. It will be uploaded to the organization's website after the paper review is completed. 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Usage
-- You can run the <b>Modeling/Ablation</b>.ipynb to test the PreSAGE model as well as its derived models for all datasets except for Khan.
-- To run the models on Khan, you should use the <b>Modeling/Ablation_khan file</b>. 
+- You can run the <b>Modeling/Ablation.ipynb</b> to test the PreSAGE model as well as its derived models for all datasets (except for Khan use <b>Modeling/Ablation_bis.ipynb</b>).
 - The code for running the BERT and FastText baseline is found in the <b>Baselines</b> folder.
 - The <b>Preprocessing</b> folder contains the code that was used to prepare the data.
 - The <b>Output</b> folder contains the experimental results.
