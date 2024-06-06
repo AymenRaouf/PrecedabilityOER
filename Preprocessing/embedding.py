@@ -25,14 +25,14 @@ def load_model(path, name = 'wikipedia2vec'):
     return wikipedia2vec
 
 
-def wikipedia2vec_embedding(model, concept):
+def wikipedia2vec_embedding(model, concept, d):
     try :
         return model['ENTITY/'+concept]
     except KeyError:
-        return []
+        return np.zeros((1,d))
         
         
-def node_embeddings(model, g, method = 'wikipedia2vec'):
+def node_embeddings(model, g, d, method = 'wikipedia2vec'):
     embeddings_concepts = {}
     concepts = []
     missing_concepts = []
@@ -40,7 +40,7 @@ def node_embeddings(model, g, method = 'wikipedia2vec'):
         for s, p, o in g:
             concept = symbols_filter(s.split('/')[-1])
             if str(p) == 'https://univ-nantes.fr/ontology/pageRank' :
-                embedding = wikipedia2vec_embedding(model, concept)
+                embedding = wikipedia2vec_embedding(model, concept, d)
                 if len(embedding) != 0:
                     embeddings_concepts[concept] = {}
                     embeddings_concepts[concept]['list'] = embedding
@@ -56,8 +56,8 @@ def node_embeddings(model, g, method = 'wikipedia2vec'):
     }
     
 
-def embedder_embeddings(resources, d = 300):
-    path = "models/wikipedia/enwiki_20180420_"+str(d)+"d.txt"
+def embedder_embeddings(resources, publisher, d = 300):
+    path = "../Models/enwiki_20180420_"+str(d)+"d.txt"
     model = load_model(path, d)
     script_dir = os.path.dirname(os.path.realpath('__file__'))
     concepts = []
@@ -68,11 +68,11 @@ def embedder_embeddings(resources, d = 300):
         current_concepts = []
         
         g = rdflib.Graph()
-        g_path = os.path.join(script_dir, '../Output/Graphs/v01/' + str(c) + '.ttl')
+        g_path = os.path.join(script_dir, '../Output/Graphs/v01/' + publisher + '/' + str(c) + '.ttl')
         try :
             g.parse(g_path, format='turtle')
 
-            embeddings = node_embeddings(model, g, method='wikipedia2vec')
+            embeddings = node_embeddings(model, g, d, method='wikipedia2vec')
 
             embeddings_concepts = embeddings['embeddings']
             missing_concepts.append(embeddings['missing_concepts'])
@@ -104,14 +104,14 @@ def fasttext_embeddings(sentences, n_gram, window, size, epochs):
     sentences_vector_fasttext = list(fasttext.wv[sentences])
     return sentences_vector_fasttext
 
-def embeddings(sentences, resources, methods, save = False, path = ''):
+def embeddings(sentences, resources, methods, publisher, save = False, path = ''):
 
     embeddings_df = pd.DataFrame()
 
     if 'BERT' in methods:
         embeddings_df['BERT'] = bert_embeddings(sentences)
-    if 'EMBEDD-ER' in methods:
-        embeddings_df['EMBEDD-ER'] = embedder_embeddings(resources, d = 300)
+    if 'embedd-er' in methods:
+        embeddings_df['EMBEDD-ER'] = embedder_embeddings(resources, publisher, d = 300)
     if 'FastText' in methods:
         embeddings_df['FastText'] = fasttext_embeddings(sentences, n_gram = 3, window = 5, size = 300, epochs = 10)
 
