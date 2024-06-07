@@ -56,9 +56,10 @@ def node_embeddings(model, g, d, method = 'wikipedia2vec'):
     }
     
 
-def embedder_embeddings(resources, publisher, d = 300):
-    path = "../Models/enwiki_20180420_"+str(d)+"d.txt"
-    model = load_model(path, d)
+def embedder_embeddings(resources, publisher, model = None, d = 300):
+    if model is None:
+        path = "../Models/enwiki_20180420_"+str(d)+"d.txt"
+        model = load_model(path, d)
     script_dir = os.path.dirname(os.path.realpath('__file__'))
     concepts = []
     missing_concepts = []
@@ -104,14 +105,14 @@ def fasttext_embeddings(sentences, n_gram, window, size, epochs):
     sentences_vector_fasttext = list(fasttext.wv[sentences])
     return sentences_vector_fasttext
 
-def embeddings(sentences, resources, methods, publisher, save = False, path = ''):
+def embeddings(sentences, resources, methods, publisher, model = None, save = False, path = ''):
 
     embeddings_df = pd.DataFrame()
 
     if 'BERT' in methods:
         embeddings_df['BERT'] = bert_embeddings(sentences)
     if 'embedd-er' in methods:
-        embeddings_df['EMBEDD-ER'] = embedder_embeddings(resources, publisher, d = 300)
+        embeddings_df['EMBEDD-ER'] = embedder_embeddings(resources, publisher, model, d = 300)
     if 'FastText' in methods:
         embeddings_df['FastText'] = fasttext_embeddings(sentences, n_gram = 3, window = 5, size = 300, epochs = 10)
 
