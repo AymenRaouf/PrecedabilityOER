@@ -29,7 +29,7 @@ def wikipedia2vec_embedding(model, concept, d):
     try :
         return model['ENTITY/'+concept]
     except KeyError:
-        return np.zeros((1,d))
+        return np.zeros((d))
         
         
 def node_embeddings(model, g, d, method = 'wikipedia2vec'):
