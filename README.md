@@ -18,17 +18,13 @@ pip install -r requirements.txt
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Data
-- Due to the large size of the data folder, we were not able to upload it to Git. It will be uploaded to the organization's website after the paper review is completed. 
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
 ## Usage
-- You can run the <b>Modeling/Ablation.ipynb</b> to test the PreSAGE model as well as its derived models for all datasets (except for Khan use <b>Modeling/Ablation_bis.ipynb</b>).
-- The code for running the BERT and FastText baseline is found in the <b>Baselines</b> folder.
+- Generate initial node features using <b>Preprocessing/Features.ipynb</b>.
+- You can run the <b>Results/Ablation.ipynb</b> to test the PreSAGE model as well as the other derived models for all datasets (except for Khan use <b>Modeling/Ablation_bis.ipynb</b>).
+- The code for running the baselines BERT and FastText is found in the <b>Baselines</b> folder.
 - The <b>Preprocessing</b> folder contains the code that was used to prepare the data.
 - The <b>Output</b> folder contains the experimental results.
-- The results can be seen and visualized using the files found on the <b>Evaluation</b> folder. 
+- The results can be seen and visualized using the files found on the <b>Evaluation/Visualization.ipynb</b> folder. 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
