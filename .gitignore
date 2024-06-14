@@ -1,8 +1,11 @@
-Data/
+Data/Khan/embeddings
+Data/MIT/embeddings
+Data/OYC/embeddings
+Data/Stanford/embeddings
 Extraction/
 .env
 .gitignore
 Output/Graphs
 clara-datasets/
 Baselines/cc.en.300.bin
-Models/enwiki_20180420_300d.txt
+Preprocessing/enwiki_20180420_300d.txt
