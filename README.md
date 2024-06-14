@@ -22,7 +22,7 @@ pip install -r requirements.txt
 - The type of data available :
     - Raw text data in the <b>Data/PUBLISHER/data</b>.
     - Precedence relations (Ground truth) <b>Data/PUBLISHER/precedence</b>
-    - The initial node features (embeddings) are not included in this repository to keep its sotrage size minimal. However, the code to generate these embeddings is included.
+    - The initial node features (embeddings) are not included in this repository to keep its storage size minimal. However, the code to generate these embeddings is included.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
